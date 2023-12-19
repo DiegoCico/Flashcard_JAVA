@@ -8,14 +8,14 @@ public class Main {
         String i = "";
         System.out.println("Welcome to study room");
 
-        while(!i.equals("4")){
+        while(!"4".equals(i)){
             options();
             i = in.nextLine();
 
-            if(i.equals("1"))
+            if("1".equals(i))
                 d.add(createDeck());
 
-            if (i.equals("2")) {
+            if ("2".equals(i)) {
                 System.out.println("Name of deck");
                 String name = in.nextLine();
                 int index = locateDeck(d, name);
@@ -25,7 +25,7 @@ public class Main {
                     d.remove(index);
             }
 
-            if (i.equals("3")){
+            if ("3".equals(i)){
                 System.out.println("Name of deck");
                 String name = in.nextLine();
                 int index = locateDeck(d, name);
@@ -35,11 +35,11 @@ public class Main {
                     infoDeck(d.get(index));
             }
 
-            if(i.equals("4"))
+            if("4".equals(i))
                 showAllDecks(d);
 
 
-            if(i.equals("5"))
+            if("5".equals(i))
                 break;
         }
     }
@@ -63,7 +63,7 @@ public class Main {
 
 
 
-        while(!i.equals("n")){
+        while(!"n".equals(i)){
             System.out.println("Flashcard number " + num);
             System.out.println("Front of deck");
             String front = in.nextLine();
